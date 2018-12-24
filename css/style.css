@@ -1,8 +1,10 @@
+@import "compass/css3";
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .header{
   width: 100%;
@@ -36,33 +38,50 @@ body{
   background: rgba(91, 97, 96, 0.5);
   align-self: center;
 }
-.navbar ul {
-  list-style-type: none;
-  overflow: hidden;
-  text-decoration: none;
-  margin-top: 0px;
-  margin-bottom: 12px;
-  padding-left: 0px;
+.navigation {
+  list-style: none;
+  margin: 0;  
+  background: deepskyblue;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
 }
-.navbar li {
-  float: left; 
+.navigation a {
   text-decoration: none;
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color:black;
-  padding: 14px 16px;
-  padding-left: 35px;
-  border-left: 1px solid rgb(99, 96, 96);
-  padding-right: 40px;
+  display: block;
+  padding: 1em;
+  color: white;
 }
-.navbar a {
-  text-decoration: none;
-  color:black;
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
 }
-.navbar a:hover {
-  text-decoration: underline;
-  color:blue;
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
 }
 .tree1{
     /* The image used */
@@ -98,23 +117,21 @@ height: 45px;
 }
 .article1{
   order: 1;
-  flex: auto;
   padding: 5px;
   border: 1px solid rgb(99, 96, 96);
 }
 .article2{
   order: 2;
-  flex: auto;
   padding: 5px;
   border: 1px solid rgb(99, 96, 96);
 }
 .article3{
   order: 3;
-  flex: auto;
   padding: 5px;
   border: 1px solid rgb(99, 96, 96);
 }
 .articleimage img{
+  display: initial;
   width:200px;
   height: 200px;
   padding-left: 60px;
@@ -175,4 +192,120 @@ height: 45px;
 .column5{
   order: 5;
   flex: auto;
+}
+@media only screen and (max-width: 1024px){
+    .navbar {
+      justify-content: space-around;
+    }
+  .header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color:rgb(22, 126, 19);
+  }
+  .articleimage img{
+    display: none;
+  }
+  .threecolumn{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background: rgba(150, 247, 126, 0.5);
+  }
+  .footer, .fivecolumn{ 
+    display: flex;
+    flex-direction: column; 
+    bottom: 0px;
+    width: 100%; 
+    background: rgba(52, 53, 52, 0.5); 
+  }
+  .hero {
+    display: flex;
+    flex-direction: column; 
+    align-self: center;
+    background: rgba(109, 91, 91, 0.5);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .logo{
+    border: none;
+    order: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-content: center;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+}
+}
+@media only screen and (max-width: 320px){
+  .navbar {
+    justify-content: space-around;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+}
+  .header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color:rgb(22, 126, 19);
+  }
+  .articleimage img{
+    display: none;
+  }
+  .threecolumn{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background: rgba(150, 247, 126, 0.5);
+  }
+  .footer, .fivecolumn{ 
+    display: flex;
+    flex-direction: column; 
+    bottom: 0px;
+    width: 100%; 
+    background: rgba(52, 53, 52, 0.5); 
+  }
+  .tree1{
+    /* The image used */
+    background-image: url("../img/tree.png");
+    width: 100%;
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    .hero {
+      display: flex;
+      flex-direction: column; 
+      align-self: center;
+      background: rgba(109, 91, 91, 0.5);
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .navbar ul {
+      list-style-type: none;
+      overflow: scroll;
+      text-decoration: none;
+      margin-top: 0px;
+      margin-bottom: 12px;
+      padding-left: 0px;
+    }
+    .options{
+      display: none;
+    }
+    .logo{
+      border: none;
+      order: 1;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      align-self: center;
+    }
 }
