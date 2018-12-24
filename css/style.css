@@ -1,0 +1,178 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  display: flex;
+  background-color:rgb(22, 126, 19);
+}
+.logo{
+  border-right: 2px solid rgb(148, 21, 21);
+  order: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.logo img{
+  width: 150px;
+  height: 70px;
+  margin-top: 2px;
+  margin-right: 20px;
+}
+.options{
+  order: 2;
+  flex-grow: 2;
+  text-align: center;
+  font-display: inherit;
+}
+.navbar{
+  width: 100%;
+  height: 45px;
+  margin-top: 70px;
+  background: rgba(91, 97, 96, 0.5);
+  align-self: center;
+}
+.navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration: none;
+  margin-top: 0px;
+  margin-bottom: 12px;
+  padding-left: 0px;
+}
+.navbar li {
+  float: left; 
+  text-decoration: none;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color:black;
+  padding: 14px 16px;
+  padding-left: 35px;
+  border-left: 1px solid rgb(99, 96, 96);
+  padding-right: 40px;
+}
+.navbar a {
+  text-decoration: none;
+  color:black;
+}
+.navbar a:hover {
+  text-decoration: underline;
+  color:blue;
+}
+.tree1{
+    /* The image used */
+    background-image: url("../img/tree.png");
+    /* Full height */
+    height: 80%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero {
+  display: flex;
+  flex-direction: column; 
+  margin: 100px;
+  margin-top: 60px;
+  align-self: center;
+  background: rgba(146, 118, 118, 0.5);
+  padding: 30px;
+}
+.hero p{
+  margin: 5px;
+}
+.headerhero{
+height: 45px;
+}
+.threecolumn{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  background: rgba(150, 247, 126, 0.5);
+}
+.article1{
+  order: 1;
+  flex: auto;
+  padding: 5px;
+  border: 1px solid rgb(99, 96, 96);
+}
+.article2{
+  order: 2;
+  flex: auto;
+  padding: 5px;
+  border: 1px solid rgb(99, 96, 96);
+}
+.article3{
+  order: 3;
+  flex: auto;
+  padding: 5px;
+  border: 1px solid rgb(99, 96, 96);
+}
+.articleimage img{
+  width:200px;
+  height: 200px;
+  padding-left: 60px;
+  padding-right: 60px; 
+}
+.articleimage figcaption{
+  margin-left: 60px;
+}
+.footer, .fivecolumn{ 
+  display: flex;
+  flex-direction: row; 
+  bottom: 0px;
+  width: 100%; 
+  background: rgba(52, 53, 52, 0.5); 
+}
+.fivecolumn p{
+  padding-left: 25px;
+}
+.fivecolumn ul {
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration: none;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 25px;
+}
+.fivecolumn li {
+  text-decoration: none;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  padding: 2px;
+}
+.fivecolumn a {
+  text-decoration: none;
+  color:rgb(238, 230, 230);
+}
+.fivecolumn a:hover {
+  text-decoration: underline;
+  color:blue;
+}
+.column1{
+  order: 1;
+  flex: auto;
+}
+.column2{
+  order: 2;
+  flex: auto;
+}
+.column3{
+  order: 3;
+  flex: auto;
+}
+.column4{
+  order: 4;
+  flex: auto;
+}
+.column5{
+  order: 5;
+  flex: auto;
+}
